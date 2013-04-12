@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MenuScreenActivity" >
+
+        <Button
+            android:id="@+id/buttonSinglePlayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:text="Single Player" />
+
+        <Button
+            android:id="@+id/buttonTwoPlayerLocal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttonSinglePlayer"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:text="Two Player - Local" />
+
+        <Button
+            android:id="@+id/buttonTwoPlayerNetwork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttonTwoPlayerLocal"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="27dp"
+            android:text="Two Player - Network" />
+
+        <NumberPicker
+            android:id="@+id/numberPickerNeedXToWin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewRows"
+            android:layout_toRightOf="@+id/buttonTwoPlayerLocal"
+            android:ems="10"
+            android:inputType="number" />
+
+        <NumberPicker
+            android:id="@+id/numberPickerColumns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/numberPickerNeedXToWin"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/textViewRows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/numberPickerRows"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="22dp"
+            android:text="Rows:"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textViewColumns"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textViewRows"
+            android:layout_alignBottom="@+id/textViewRows"
+            android:layout_centerHorizontal="true"
+            android:text="Columns:"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textViewNeedXToWin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textViewColumns"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/buttonTwoPlayerLocal"
+            android:text="Needed to win:"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <NumberPicker
+            android:id="@+id/numberPickerRows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/buttonTwoPlayerLocal"
+            android:ems="10"
+            android:inputType="number" />
+
+</RelativeLayout>
